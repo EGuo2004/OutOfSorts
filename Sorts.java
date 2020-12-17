@@ -18,4 +18,24 @@ public class Sorts{
       }
     }
   }
+
+  public static void selectionSort(int[] data) {
+    int temp;
+    int min_val;
+    int indexOf;
+    for (int i = 0; i < data.length - 1; i++) {
+      min_val = data[i];
+      for(int j = i + 1; j < data.length; j++) {
+        if(data[j] < min_val) {
+          min_val = data[j];
+          indexOf = j;
+        }
+      }
+      temp = data[i];
+      data[i] = data[min_val];
+      data[j] = temp;
+    }
+  }
+
+
 }
